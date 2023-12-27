@@ -81,5 +81,13 @@ public class Booking {
 	}	
 	
 	
+	@Override
+	public String toString() {
+		
+		String strRep = " Booking Activity: "+ this.bookingActivity + "\n Booking ID: " + this.bookingId + "\n Booking Date: "+ this.bookingDate.toLocalDateTime()+ "\n Tester ID: " + this.testerId + "\n phone ID: " + this.phoneId;
+		
+		return strRep;		
+	}
+	
 
 }

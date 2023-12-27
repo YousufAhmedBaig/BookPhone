@@ -43,6 +43,16 @@ public class BookPhoneController {
         return new ResponseEntity<>(bookingInfo, HttpStatus.OK);
     }
 	
+	// Get phone availability by id REST API
+    // http://localhost:8080/phones/availability
+	
+	@GetMapping("availability")
+    public ResponseEntity<ArrayList<BookingInfo>> getAvailabilityForAllPhones() {
+		
+        ArrayList<BookingInfo> bookingInfoList = availabilityService.getAvailability();
+        return new ResponseEntity<>(bookingInfoList, HttpStatus.OK);
+    }
+	
 	// Get phone booking details by id REST API
     // http://localhost:8080/phones/bookings/7
 	
